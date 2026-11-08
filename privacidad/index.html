@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad de FUSIA</title>
+<meta name="description" content="Qué datos trata FUSIA, dónde se guardan, cómo se conectan las plataformas y cómo revocar permisos y eliminar datos.">
+<link rel="icon" type="image/png" href="../assets/icono.png">
+<link rel="stylesheet" href="../assets/sitio.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <a href="../"><img src="../assets/logo.png" width="480" height="143" alt="FUSIA"></a>
+  <nav aria-label="Principal">
+    <a href="../">Inicio</a>
+    <a href="../terminos/">Términos y condiciones</a>
+    <a href="./" aria-current="page">Política de privacidad</a>
+  </nav>
+</header>
+
+<main id="contenido" class="legal">
+  <header>
+    <h1>Política de privacidad</h1>
+    <p class="fecha">Última actualización: 8 de noviembre de 2026</p>
+  </header>
+  <nav class="indice" aria-label="En esta página">
+    <ol>
+      <li><a href="#responsable">Responsable</a></li>
+      <li><a href="#sitio">Este sitio</a></li>
+      <li><a href="#datos">Datos que trata FUSIA</a></li>
+      <li><a href="#almacenamiento">Dónde se guardan</a></li>
+      <li><a href="#plataformas">Conexiones y permisos</a></li>
+      <li><a href="#tiktok">TikTok</a></li>
+      <li><a href="#ia">Proveedores de IA</a></li>
+      <li><a href="#finalidad">Para qué se usan</a></li>
+      <li><a href="#conservacion">Conservación</a></li>
+      <li><a href="#revocar">Revocar permisos</a></li>
+      <li><a href="#eliminar">Eliminar datos</a></li>
+      <li><a href="#derechos">Tus derechos</a></li>
+      <li><a href="#seguridad">Seguridad</a></li>
+      <li><a href="#menores">Menores</a></li>
+      <li><a href="#cambios">Cambios y contacto</a></li>
+      <li><a href="#english">English summary</a></li>
+    </ol>
+  </nav>
+  <div class="cuerpo">
+    <section id="responsable"><h2>Responsable</h2>
+      <p>El responsable del tratamiento es Débora Becerra, persona física. Podés escribir a <a href="mailto:debobecerra4@gmail.com">debobecerra4@gmail.com</a> por cualquier tema de privacidad.</p></section>
+
+    <section id="sitio"><h2>Este sitio</h2>
+      <p>Este sitio no usa cookies, formularios, analítica ni scripts. Está alojado en GitHub Pages, y GitHub puede registrar datos técnicos de la visita, como la dirección IP, según su propia política de privacidad.</p></section>
+
+    <section id="datos"><h2>Datos que trata FUSIA</h2>
+      <p>Según las funciones que uses, FUSIA puede tratar:</p>
+      <ul>
+        <li><strong>Información de la marca:</strong> nombre, descripción, kit de marca, documentos y públicos.</li>
+        <li><strong>Datos de las cuentas conectadas:</strong> identificador y nombre de la cuenta, permisos concedidos, publicaciones con su fecha, texto y enlace, y métricas como alcance, vistas, me gusta, comentarios, guardados y compartidos.</li>
+        <li><strong>Datos de pauta y CRM,</strong> si conectás esas fuentes: inversión, resultados y leads.</li>
+        <li><strong>Mensajes y comentarios de Instagram,</strong> si la cuenta de la marca autorizó esos permisos.</li>
+        <li><strong>Trabajo dentro de FUSIA:</strong> conversaciones, tareas, piezas, aprobaciones y registro de actividad.</li>
+        <li><strong>Credenciales de conexión:</strong> tokens de acceso y actualización.</li>
+      </ul></section>
+
+    <section id="almacenamiento"><h2>Dónde se guardan</h2>
+      <p>FUSIA se instala en Windows y guarda sus datos en ese equipo, separados por marca. No existe un servidor central de FUSIA que reciba esos datos.</p>
+      <p>Los tokens se guardan cifrados con la protección de datos de Windows (DPAPI) y no se envían a los proveedores de IA ni se incluyen en la memoria en la nube.</p>
+      <p><strong>Memoria en la nube, opcional.</strong> Si se activa, una copia de la memoria de cada marca se cifra con AES-256-GCM con una clave propia de esa marca, y se guarda en Google Firestore o Google Drive. Esos servicios sólo reciben datos cifrados.</p>
+      <p><strong>Trabajo remoto, opcional.</strong> Si se activa la cola en la nube, una copia de la base viaja a un repositorio privado de GitHub para que las tareas pendientes avancen con el equipo apagado. Esa copia no incluye credenciales ni el registro de actividad, y los leads van anónimos.</p></section>
+
+    <section id="plataformas"><h2>Conexiones y permisos</h2>
+      <p>Cada conexión se autoriza por marca, con el inicio de sesión de la propia plataforma. FUSIA recibe sólo los permisos que aparecen en esa pantalla.</p>
+      <div class="tabla-marco">
+        <table>
+          <thead><tr><th scope="col">Plataforma</th><th scope="col">Permisos o acceso</th><th scope="col">Uso</th></tr></thead>
+          <tbody>
+            <tr><td>Instagram</td><td>instagram_basic, instagram_manage_insights, instagram_manage_comments, instagram_manage_messages, instagram_content_publish</td><td>Leer perfil, métricas, comentarios y mensajes. Publicar, responder, ocultar o eliminar sólo con aprobación humana. La configuración actual de Meta también concede ads_read y ads_management, que esta conexión no usa.</td></tr>
+            <tr><td>Meta (lectura)</td><td>pages_show_list, pages_read_engagement, read_insights, instagram_basic, instagram_manage_insights, business_management, ads_read</td><td>Importar métricas y resultados.</td></tr>
+            <tr><td>YouTube y Google Ads</td><td>youtube.readonly y acceso a Google Ads</td><td>Sólo consultas de lectura.</td></tr>
+            <tr><td>Kommo</td><td>Token de una integración privada</td><td>Sólo consultas de lectura de leads.</td></tr>
+            <tr><td>Microsoft Clarity</td><td>Token del sitio de la marca</td><td>Leer métricas de uso de ese sitio.</td></tr>
+          </tbody>
+        </table>
+      </div></section>
+
+    <section id="tiktok"><h2>TikTok</h2>
+      <p><strong>La conexión oficial con TikTok todavía no está disponible.</strong> Cuando TikTok apruebe FUSIA, esta conexión será de sólo lectura y usará Login Kit para escritorio, con estos permisos previstos:</p>
+      <ul>
+        <li><strong>user.info.basic:</strong> identificador, nombre visible y avatar de la cuenta, para mostrar qué cuenta está vinculada a la marca.</li>
+        <li><strong>user.info.stats:</strong> estadísticas públicas de la cuenta, como seguidores y total de me gusta.</li>
+        <li><strong>video.list:</strong> lista de videos públicos de la cuenta y sus datos, como título, fecha, vistas, me gusta, comentarios y compartidos, para medir su rendimiento.</li>
+      </ul>
+      <p>FUSIA no pedirá permisos para publicar en TikTok mientras esa función no exista. El token quedará cifrado en el equipo y las métricas se guardarán sólo en la marca que autorizó la cuenta. Esos datos podrán enviarse a un proveedor de IA únicamente cuando la marca pida un análisis que los necesite. No se venderán ni se usarán para publicidad.</p>
+      <p><strong>Lectura pública.</strong> Mientras tanto, si una marca carga un perfil o video público de TikTok, FUSIA puede leer sin iniciar sesión su enlace, fecha, texto, miniatura, vistas, me gusta y comentarios. No accede a información privada.</p></section>
+
+    <section id="ia"><h2>Proveedores de IA</h2>
+      <p>Para responder, FUSIA envía el contexto necesario de la marca activa al motor que corresponda. Ese contexto puede incluir datos de la sección anterior, pero no credenciales.</p>
+      <ul>
+        <li><strong>Claude Code,</strong> de Anthropic, y <strong>Codex,</strong> de OpenAI: se usan con la sesión de la cuenta de quien opera FUSIA y se rigen por las condiciones de esa cuenta.</li>
+        <li><strong>Ollama:</strong> funciona en el propio equipo, sin enviar datos afuera.</li>
+        <li><strong>Herramientas creativas,</strong> como Magnific: si se usan en Creativos, reciben la indicación y las imágenes de esa pieza.</li>
+      </ul></section>
+
+    <section id="finalidad"><h2>Para qué se usan</h2>
+      <p>Los datos se usan sólo para prestar las funciones de FUSIA a la marca que los aportó: investigar, analizar, planificar, producir y medir. FUSIA no vende datos, no los usa para publicidad propia y no los comparte con otras marcas.</p></section>
+
+    <section id="conservacion"><h2>Conservación</h2>
+      <p>Los datos permanecen en el equipo hasta que los elimines. Los respaldos locales se conservan hasta que se borren. La memoria en la nube, si está activa, guarda por defecto las últimas 5 versiones por marca.</p></section>
+
+    <section id="revocar"><h2>Revocar permisos</h2>
+      <p>Podés desconectar una cuenta desde <strong>Conexiones</strong> o <strong>Integraciones</strong> en FUSIA. Eso borra su token del equipo y, cuando la plataforma lo permite, también revoca el acceso.</p>
+      <p>También podés quitar a FUSIA desde la configuración de aplicaciones autorizadas de cada plataforma. En Instagram, ese paso debe hacerse en la configuración de Meta, porque desconectar en FUSIA sólo borra la autorización guardada en el equipo.</p></section>
+
+    <section id="eliminar"><h2>Eliminar datos</h2>
+      <ul>
+        <li><strong>Eliminar una marca:</strong> borra sus datos de la base de FUSIA. Antes se crea una copia de seguridad local, que se conserva en el equipo hasta que se elimine.</li>
+        <li><strong>Desinstalar FUSIA:</strong> permite elegir si se borran también las marcas, la memoria y los respaldos del equipo.</li>
+        <li><strong>Memoria y trabajo remoto:</strong> eliminar una marca no borra sus copias en Firestore, Google Drive o GitHub. Hay que eliminarlas en esos servicios o pedirlo al contacto indicado. FUSIA descarta las versiones que exceden el límite; en Google Drive pasan a la papelera, que Drive vacía a los 30 días.</li>
+      </ul>
+      <p>Si una marca trató tus datos en FUSIA, podés pedir su eliminación a <a href="mailto:debobecerra4@gmail.com">debobecerra4@gmail.com</a>.</p></section>
+
+    <section id="derechos"><h2>Tus derechos</h2>
+      <p>Podés pedir acceso, rectificación o eliminación de tus datos, y oponerte a su tratamiento, escribiendo al contacto indicado. También podés reclamar ante la autoridad competente de la República Argentina.</p></section>
+
+    <section id="seguridad"><h2>Seguridad</h2>
+      <p>FUSIA separa los datos por marca, cifra los tokens y exige un PIN de propietaria para las aprobaciones sensibles. Como los datos están en el equipo, su seguridad también depende de proteger el acceso a Windows. Ningún sistema es completamente seguro.</p></section>
+
+    <section id="menores"><h2>Menores</h2>
+      <p>FUSIA no está dirigida a menores de 18 años.</p></section>
+
+    <section id="cambios"><h2>Cambios y contacto</h2>
+      <p>Si esta política cambia, publicaremos la nueva versión en esta página con su fecha. Cualquier consulta puede enviarse a <a href="mailto:debobecerra4@gmail.com">debobecerra4@gmail.com</a>.</p></section>
+
+    <section id="english" lang="en"><h2>English summary</h2>
+      <p>FUSIA is Windows software that stores data locally, separated by brand; there is no central FUSIA server. Tokens are encrypted with Windows DPAPI and are never sent to AI providers. Optional cloud memory is encrypted before leaving the device. The official TikTok connection is not available yet; once approved it will be read-only and use user.info.basic, user.info.stats and video.list to show the linked account and measure public video performance. Data is used only to provide FUSIA to the brand that supplied it, and it is not sold. You can disconnect an account in FUSIA or in the platform's authorized apps settings, delete a brand, or request deletion through the contact above. The Spanish version above prevails.</p></section>
+  </div>
+</main>
+
+<footer class="pie">
+  <p>Contacto: <a href="mailto:debobecerra4@gmail.com">debobecerra4@gmail.com</a></p>
+  <nav aria-label="Legales"><a href="../terminos/">Términos y condiciones</a><a href="./">Política de privacidad</a></nav>
+</footer>
+</body>
+</html>
